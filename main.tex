@@ -48,7 +48,7 @@ with independent fair signs $\epsilon_{ij}$ and a fixed multiplicity $m\ge1$. It
 A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 For $m=1$ we have $S_{1,n}=S_n$ and $Q_n=\sigma_n^2$, so $A_{1,n}=\sigma_n\Pr(S_n=0)$.
-Equivalently, $2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum. These counts were studied by Bagdasar and Andrica~\cite{BA17}, and He, Lv and Zhou~\cite{HLZ23} count the ordered partitions of such multisets into $k$ parts of equal sum. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$.
+Equivalently, $2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum. These counts were studied by Bagdasar and Andrica~\cite{BA17}. Partitions of such multisets into $k$ parts of equal sum were studied by Andrica and Bagdasar~\cite{AB21}, and the ordered ones are counted by He, Lv and Zhou~\cite{HLZ23}. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be consecutive admissible indices for $m$. Then $A_{m,a}\ne A_{m,n}$, and $A_{m,a}<A_{m,n}$ exactly in the following eight cases:
@@ -164,6 +164,12 @@ The \LaTeX\ source and two programs with their outputs are available at \url{htt
 Codex (OpenAI) found the proof of Theorem~\ref{thm:main} and the classification for all multiplicities, and decided the finite comparisons with its own program. Claude (Anthropic) checked each step of the proof, rederived the constants, wrote the two programs of the repository and recomputed every finite comparison with both, checked the citations, and wrote the text. The question is problem P2538 of TheoremDB; the asymptotic results quoted in the introduction are due to Andrica and Tomescu, Sullivan, and Baker and Wagner, and the counts for several copies were studied by Bagdasar and Andrica. The case $m=1$ of Theorem~\ref{thm:main}, which answers that question, is new. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \begin{thebibliography}{99}
+
+\bibitem{AB21}
+D.~Andrica and O.~Bagdasar.
+\newblock On $k$-partitions of multisets with equal sums.
+\newblock \emph{Ramanujan J.}, 55(2):421--435, 2021.
+\newblock \url{https://doi.org/10.1007/s11139-021-00418-7}.
 
 \bibitem{AT02}
 D.~Andrica and I.~Tomescu.
