@@ -22,22 +22,22 @@ Jerusalem, Givat Ram,}\\
 \maketitle
 
 \begin{abstract}
-Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. The same argument applies when every summand $j\epsilon_j$ is replaced by $m$ independent copies: there are four such decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the Fourier integrals of consecutive sums on the range where the integrands are positive, using that the vector $(j^2/Q_n)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. An exact computation decides the comparisons with $mn<320$.
+Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. When every summand $j\epsilon_j$ is replaced by $m$ independent copies, the corresponding normalized sequence has exactly four decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the trigonometric integrals of consecutive sums on the range where the integrands are nonnegative, using that the vector $(j^2/Q_n)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. The finitely many pairs $(m,n)$ with $mn<320$ are decided by an exact computation.
 \end{abstract}
 
-\noindent\textbf{Keywords:} signed sums, Erd\H{o}s--Sur\'anyi sequences, Fourier integrals, majorization, local limit theorem.
+\noindent\textbf{Keywords:} signed sums, trigonometric integrals, majorization, Karamata's inequality, ordered partitions of multisets.
 
 \noindent\textbf{Mathematics Subject Classification (2020):} 05A16, 60F05, 11B75.
 
 \section{Introduction}
 
-The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$, and conjectured that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$; Sullivan~\cite{Sul13} proved this by the Laplace method. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
+The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$~\cite[Theorem~2.3]{AT02}, and conjectured~\cite[Conjecture~2.6]{AT02} that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$; Sullivan~\cite{Sul13} proved this by the Laplace method. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
 
 Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. Then $\Pr(S_n=0)=Z(n)/2^n$, and Sullivan's theorem reads
 \[
 \sqrt{Q_n}\,\Pr(S_n=0)\to\sqrt{2/\pi}\qquad(n\equiv0,3\bmod 4).
 \]
-TheoremDB~\cite{TDB} records as problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$. An exact computation recorded there shows strict increase from $16$ to $1000$; the only decreases up to $16$ are $3\to4$, $8\to11$ and $15\to16$.
+TheoremDB~\cite{TDB}, a public database of problems for machine mathematics, lists as open problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$. An exact computation recorded there shows strict increase from $16$ to $1000$; the only decreases up to $16$ are $3\to4$, $8\to11$ and $15\to16$.
 
 More generally, let
 \[
@@ -49,8 +49,7 @@ A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$, so $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$.
 
-Equivalently, $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. In the notation of Andrica and Tomescu~\cite[Section~1]{AT02}, $C_{m,n}=S(m,\dots,m;1,\dots,n)$.
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered $k$-partitions of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of ordered $k$-partitions of equal sum of the multiset with $m$ copies of each of $1,\dots,n$ when $mn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar.
+The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. In the notation of Andrica and Tomescu~\cite[Section~1]{AT02}, $C_{m,n}=S(m,\dots,m;1,\dots,n)$.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -65,19 +64,21 @@ m=3&:\quad (n,a)=(3,4).
 Along $n\equiv0,3\pmod 4$, the sequence $\sqrt{Q_n}\,\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
 \end{corollary}
 
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions into $k$ parts of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of such partitions of the multiset with $m$ copies of each of $1,\dots,n$ when $mn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar. None of these works compares consecutive terms.
+
 For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1]{BW16} gives, for every $\delta>0$,
 \[
 A_{1,n}=\sqrt{2/\pi}\,\Bigl(1-\frac{r_n}{4}\Bigr)+O\bigl(n^{-2+\delta}\bigr),\qquad
 r_n=\frac{1}{Q_n^2}\sum_{j\le n}j^4\sim\frac{9}{5n},
 \]
-so $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the values of $\sqrt{2/\pi}\,(1-r_k/4)$ at $k=n$ and at $k=a$ differ by an amount of order $n^{-2}$, which the error term does not control, so the expansion does not give the sign of $A_{1,a}-A_{1,n}$, as is noted in~\cite{TDB}. A third term, which by~\cite{BW16} the same method yields, would give the sign for all large $n$, with no bound on how large.
+so for large $n$ the sequence $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the two-term values $\sqrt{2/\pi}\,(1-r_n/4)$ and $\sqrt{2/\pi}\,(1-r_a/4)$ differ by an amount of order $n^{-2}$, which the error term does not control, so the expansion does not give the sign of $A_{1,a}-A_{1,n}$; TheoremDB~\cite{TDB} records the same obstruction for the formal Edgeworth expansion. A third term, which by~\cite{BW16} the same method yields, would give the sign for all large $n$, with no bound on how large.
 
-We compare the two Fourier integrals directly. For admissible $n$,
+For admissible $n$,
 \begin{equation}\label{eq:A}
 A_{m,n}=\frac2\pi\int_0^{B_n}f_n(x)\,dx,\qquad
-f_n(x)=\prod_{j=1}^n\cos^m\Bigl(\frac{jx}{\sqrt{mQ_n}}\Bigr),\qquad B_n=\frac\pi2\sqrt{mQ_n},
+f_n(x)=\prod_{j=1}^n\cos^m\Bigl(\frac{jx}{\sqrt{mQ_n}}\Bigr),\qquad B_n=\frac\pi2\sqrt{mQ_n}.
 \end{equation}
-and every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite{MOA11}, applied to each power, gives for $N>n$
+We compare these integrals at the two indices of a step directly. Every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite[Proposition~3.C.1]{MOA11}, applied to each power, gives for $N>n$
 \[
 f_N(x)\ \ge\ f_n(x)\exp\Bigl(\frac{x^4}{12m}\,(r_n-r_{n+1})\Bigr)\quad(0\le x\le b_n),\qquad r_n-r_{n+1}>\frac{1}{4n^2}.
 \]
@@ -85,8 +86,8 @@ Hence $\int_0^{b_n}(f_a-f_n)\,dx\ge e^{-4}/(48mn^2)$ when $mn\ge320$. On the res
 
 \section{Proof}\label{sec:proof}
 
-Fix $m$ and write $\varphi_n(t)=\prod_{j=1}^n\cos^m(jt)$, the characteristic function of $S_{m,n}$. Replacing $t$ by $t+\pi$ multiplies $\varphi_n$ by $(-1)^{mn(n+1)/2}$, so for admissible $n$ the even function $\varphi_n$ has period $\pi$, and Fourier inversion gives $\Pr(S_{m,n}=0)=\frac{2}{\pi}\int_0^{\pi/2}\varphi_n(t)\,dt$, which is the integral formula of Andrica and Tomescu~\cite[Section~1]{AT02} with every multiplicity equal to $m$. The substitution $x=t\sqrt{mQ_n}$ gives~\eqref{eq:A}, with $f_n(x)=\varphi_n\bigl(x/\sqrt{mQ_n}\bigr)$.
-We use $f_n$ for every $n\ge1$, admissible or not. For $0\le x\le b_n$ every argument $jx/\sqrt{mQ_n}$ with $j\le n$ lies in $[0,\pi/2]$, so $f_n\ge0$ there. Since $Q_n/n^2=(2n+3+1/n)/6$ increases with $n$, so does $b_n$.
+Fix $m$ and write $\varphi_n(t)=\prod_{j=1}^n\cos^m(jt)$, the characteristic function of $S_{m,n}$. Replacing $t$ by $t+\pi$ multiplies $\varphi_n$ by $(-1)^{mn(n+1)/2}$, so for admissible $n$ the even function $\varphi_n$ has period $\pi$, and Fourier inversion gives $\Pr(S_{m,n}=0)=\frac{2}{\pi}\int_0^{\pi/2}\varphi_n(t)\,dt$, which is the trigonometric integral of Andrica and Tomescu~\cite[Section~1]{AT02} with every multiplicity equal to $m$. The substitution $x=t\sqrt{mQ_n}$ gives~\eqref{eq:A}, since $f_n(x)=\varphi_n\bigl(x/\sqrt{mQ_n}\bigr)$.
+The functions $f_n$ and the numbers $b_n$, $B_n$ are defined by the same formulas for every $n\ge1$, admissible or not. For $0\le x\le b_n$ every argument $jx/\sqrt{mQ_n}$ with $j\le n$ lies in $[0,\pi/2]$, so $f_n\ge0$ there. Since $Q_n/n^2=(2n+3+1/n)/6$ increases with $n$, so does $b_n$.
 
 \begin{lemma}\label{lem:pointwise}
 For $N>n\ge1$ and $0\le x\le b_n$,
@@ -101,11 +102,17 @@ On $|z|<\pi/2$ we have $-\log\cos z=\sum_{l\ge1}c_lz^{2l}$ with $c_1=1/2$, $c_2=
 \[
 -\log f_k(x)=m\sum_{l\ge1}c_l\Bigl(\frac{x^2}{m}\Bigr)^lP_l(k),\qquad P_l(k)=\sum_{j=1}^k\Bigl(\frac{j^2}{Q_k}\Bigr)^l,
 \]
-and the same holds with $k+1$ in place of $k$ because $b_k<b_{k+1}$. We claim $P_l(k)\ge P_l(k+1)$ for every $l\ge1$, with equality for $l=1$ since $P_1\equiv1$. Let $u\in\mathbb R^{k+1}$ list $k^2/Q_k,\dots,1/Q_k,0$ and $w$ list $(k+1)^2/Q_{k+1},\dots,1/Q_{k+1}$, both in decreasing order and both with sum $1$. For $i\le k$ the ratio $w_i/u_i=\bigl((j+1)/j\bigr)^2Q_k/Q_{k+1}$ with $j=k+1-i$ increases with $i$, and $u_{k+1}-w_{k+1}<0$. Hence $u_i-w_i$ changes sign at most once, and since both vectors have sum $1$ its signs run from positive to negative; the partial sums of $u-w$ rise and then fall from $0$ back to $0$, and so they are nonnegative. Thus $u$ majorizes $w$, and Karamata's inequality~\cite{MOA11} for the convex functions $y\mapsto y^l$ on $[0,\infty)$ gives the claim. Subtracting the two series and keeping only the term $l=2$, where $mc_2(x^2/m)^2=x^4/(12m)$, gives for $0\le x<b_k$
+and the same holds with $k+1$ in place of $k$ because $b_k<b_{k+1}$.
+
+We claim $P_l(k)\ge P_l(k+1)$ for every $l\ge1$, with equality for $l=1$ since $P_1\equiv1$. Let $u\in\mathbb R^{k+1}$ list $k^2/Q_k,\dots,1/Q_k,0$ and $w$ list $(k+1)^2/Q_{k+1},\dots,1/Q_{k+1}$, both in decreasing order and both with sum $1$. For $i\le k$ the ratio $w_i/u_i=\bigl((j+1)/j\bigr)^2Q_k/Q_{k+1}$ with $j=k+1-i$ increases with $i$, and $u_{k+1}-w_{k+1}<0$. Hence $u_i-w_i$ changes sign at most once, and since both vectors have sum $1$ its signs run from positive to negative; the partial sums of $u-w$ rise and then fall from $0$ back to $0$, and so they are nonnegative. Thus $u$ majorizes $w$, and Karamata's inequality~\cite[Proposition~3.C.1]{MOA11} for the convex functions $y\mapsto y^l$ on $[0,\infty)$ gives the claim. Subtracting the two series and keeping only the term $l=2$, where $mc_2(x^2/m)^2=x^4/(12m)$, gives for $0\le x<b_k$
 \[
 f_{k+1}(x)\ge f_k(x)\exp\Bigl(\frac{x^4}{12m}\bigl(P_2(k)-P_2(k+1)\bigr)\Bigr),
 \]
-and by continuity this also holds at $x=b_k$, where $f_k$ may vanish. For $x\le b_n\le b_k$ the functions $f_k$, $n\le k\le N$, are nonnegative and each exponential factor is at least $1$, so we may chain these inequalities over $k=n,\dots,N-1$, keeping the exponential factor only for $k=n$; this proves the inequality, since $P_2(k)=r_k$. Finally $\sum_{j\le n}j^4=n(n+1)(2n+1)(3n^2+3n-1)/30$ gives
+and by continuity this also holds at $x=b_k$, where $f_k$ may vanish.
+
+For $x\le b_n\le b_k$ the functions $f_k$, $n\le k\le N$, are nonnegative and each exponential factor is at least $1$, so we may chain these inequalities over $k=n,\dots,N-1$, keeping the exponential factor only for $k=n$. Since $P_2(k)=r_k$, this proves the inequality.
+
+Finally $\sum_{j\le n}j^4=n(n+1)(2n+1)(3n^2+3n-1)/30$ gives
 \[
 r_n=\frac{6(3n^2+3n-1)}{5n(n+1)(2n+1)},\qquad r_n-r_{n+1}=\frac{36(n^2+2n-1)}{5n(n+2)(2n+1)(2n+3)},
 \]
@@ -135,7 +142,7 @@ With $x=t\sqrt{mQ_k}$ the integral is $\sqrt{mQ_k}\int|\varphi_k(t)|\,dt$ over $
 \[
 \sum_{j=1}^k\sin^2(jt)=\frac k2+\frac14-\frac{\sin((2k+1)t)}{4\sin t}\ge\frac k2+\frac14-\frac k4\ge\frac k4 .
 \]
-Since $\cos^2u=1-\sin^2u\le e^{-\sin^2u}$, we get $|\varphi_k(t)|\le\exp\bigl(-\frac m2\sum_j\sin^2(jt)\bigr)\le e^{-mk/8}$, and the range of $t$ has length less than $\pi/2$.
+Since $\cos^2\theta=1-\sin^2\theta\le e^{-\sin^2\theta}$, we get $|\varphi_k(t)|\le\exp\bigl(-\frac m2\sum_j\sin^2(jt)\bigr)\le e^{-mk/8}$, and the range of $t$ has length less than $\pi/2$.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main} for $mn\ge320$]
@@ -147,19 +154,19 @@ The second integral is nonnegative. By Lemmas~\ref{lem:gain} and~\ref{lem:tail},
 \[
 \frac\pi2\bigl(A_{m,a}-A_{m,n}\bigr)\ge\frac{e^{-4}}{48mn^2}-\frac\pi2\sqrt m\,\bigl(n^{3/2}+8n^{3/2}\bigr)e^{-mn/8}.
 \]
-The right side is positive as soon as $216\pi e^4m^{3/2}n^{7/2}e^{-mn/8}<1$, which follows from $216\cdot4\cdot81\cdot u^4e^{-u/8}<1$ with $u=mn$ (using $\pi<4$, $e^4<81$ and $m^{3/2}n^{7/2}\le(mn)^4$). The function $u^4e^{-u/8}$ decreases for $u\ge32$, and at $u=320$ the inequality reads $216\cdot4\cdot81\cdot320^4<e^{40}$, which holds because $216\cdot4\cdot81\cdot320^4<7.4\cdot10^{14}$ and $e^{40}>(8/3)^{40}>10^{17}$.
+The right side is positive as soon as $216\pi e^4m^{3/2}n^{7/2}e^{-mn/8}<1$, which follows from $216\cdot4\cdot81\cdot v^4e^{-v/8}<1$ with $v=mn$ (using $\pi<4$, $e^4<81$ and $m^{3/2}n^{7/2}\le(mn)^4$). The function $v^4e^{-v/8}$ decreases for $v\ge32$, and at $v=320$ the inequality reads $216\cdot4\cdot81\cdot320^4<e^{40}$, which holds because $216\cdot4\cdot81\cdot320^4<7.4\cdot10^{14}$ and $e^{40}>(8/3)^{40}>10^{17}$.
 \end{proof}
 
-\begin{proof}[The steps with $mn<320$]
+\begin{proof}[Proof of Theorem~\ref{thm:main} for $mn<320$]
 Here $1\le m\le319$ and $n\le319/m$. Since $C_{m,n}\ge0$ and $A_{m,n}=\sqrt{mQ_n}\,C_{m,n}/2^{mn}$, the difference $A_{m,a}-A_{m,n}$ has the sign of the integer
 \[
 Q_aC_{m,a}^2-4^{m(a-n)}Q_nC_{m,n}^2 .
 \]
-For the $1268$ steps with $mn<320$ these integers are computed exactly, once by expanding the generating polynomial and once by counting choices of signs; none is zero, and exactly the eight listed in the theorem are negative.
+For the $1268$ steps with $mn<320$ these integers are computed exactly from the coefficients $C_{m,n}$ of $\prod_{j\le n}(1+x^j)^m$; none is zero, and exactly the eight listed in the theorem are negative.
 \end{proof}
 
 \begin{remark}\label{rem:values}
-The values rise slowly. Rounded to four places, $A_{1,16}=0.7755$, $A_{1,100}=0.7943$ and $A_{1,300}=0.7967$, against $\sqrt{2/\pi}=0.7979$. At $n=100$ and $n=300$ they agree with the two-term value $\sqrt{2/\pi}\,(1-r_n/4)$ to within $10^{-5}$.
+Rounded to four places, $A_{1,16}=0.7755$, $A_{1,100}=0.7943$ and $A_{1,300}=0.7967$, and $\sqrt{2/\pi}=0.7979$. For $n=100$ and $n=300$, $|A_{1,n}-\sqrt{2/\pi}\,(1-r_n/4)|<10^{-5}$.
 \end{remark}
 
 \section*{Acknowledgments and funding}
@@ -168,10 +175,10 @@ The research presented in this paper was supported by the European Research Coun
 This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. The method is described in~\cite{MathBrainPaper}.
 
 \section*{Declaration of competing interest}
-The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. Both are among the funders named above.
 
 \section*{Code and data availability}
-The \LaTeX\ source and two programs with their outputs are available at \url{https://github.com/yspennstate/signed-sums-zero-monotone}. The program \texttt{check\_polynomial.py} decides the steps with $mn<320$ by multiplying out the generating polynomial, checks the rational identities and the numerical inequality of Section~\ref{sec:proof}, and prints the values in Remark~\ref{rem:values}. The program \texttt{check\_signed\_walk.py} decides the same steps by counting signed sums.
+The \LaTeX\ source and two programs with their outputs are available at \url{https://github.com/yspennstate/signed-sums-zero-monotone}. The program \texttt{check\_polynomial.py} decides the steps with $mn<320$ by multiplying out $\prod_{j\le n}(1+x^j)^m$, checks the rational identities and the numerical inequality of Section~\ref{sec:proof}, and prints the values in Remark~\ref{rem:values}. The program \texttt{check\_signed\_walk.py} decides the same steps by counting choices of signs.
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 Codex (OpenAI) wrote the proof of Theorem~\ref{thm:main} and decided the steps with $mn<320$ with its own program. Claude (Anthropic) checked the proof and wrote the two programs of the repository and the text.
@@ -212,6 +219,7 @@ X.~He, J.-B. Lv, and N.~H. Zhou.
 
 \bibitem{MOA11}
 A.~W. Marshall, I.~Olkin and B.~C. Arnold, \emph{Inequalities: Theory of Majorization and Its Applications}, 2nd ed., Springer, New York, 2011.
+\newblock \url{https://doi.org/10.1007/978-0-387-68276-1}.
 
 \bibitem{Sul13}
 B.~D. Sullivan.
