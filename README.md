@@ -1,7 +1,7 @@
 # The normalized number of zero signed sums ±1±2±…±n increases from n=16
 
-Let S_n = ε_1 + 2ε_2 + … + nε_n with independent fair signs, and σ_n² = 1² + … + n². Along n ≡ 0, 3 (mod 4) the
-sequence σ_n P(S_n = 0) tends to √(2/π) (Sullivan, 2013). The paper proves that it increases strictly from n = 16,
+Let S_n = ε_1 + 2ε_2 + … + nε_n with independent fair signs, and Q_n = 1² + … + n². Along n ≡ 0, 3 (mod 4) the
+sequence √Q_n P(S_n = 0) tends to √(2/π) (Sullivan, 2013). The paper proves that it increases strictly from n = 16,
 with decreases only at 3→4, 8→11 and 15→16, and gives the same classification when each summand is repeated m times
 (four decreases for m = 2, one for m = 3, none for m ≥ 4).
 

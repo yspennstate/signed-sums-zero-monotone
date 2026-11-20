@@ -22,10 +22,10 @@ Jerusalem, Givat Ram,}\\
 \maketitle
 
 \begin{abstract}
-Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $\sigma_n^2=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sigma_n\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. The same argument applies when every summand $j\epsilon_j$ is replaced by $m$ independent copies: there are four decreasing steps for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the Fourier integrals of consecutive sums on the range where the integrands are positive, using that the vector $(j^2/\sigma_n^2)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. An exact computation decides the steps with $mn<320$.
+Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. The same argument applies when every summand $j\epsilon_j$ is replaced by $m$ independent copies: there are four such decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the Fourier integrals of consecutive sums on the range where the integrands are positive, using that the vector $(j^2/Q_n)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. An exact computation decides the comparisons with $mn<320$.
 \end{abstract}
 
-\noindent\textbf{Keywords:} signed sums, Erd\H{o}s--Sur\'anyi sequences, trigonometric integrals, majorization, local limit theorem.
+\noindent\textbf{Keywords:} signed sums, Erd\H{o}s--Sur\'anyi sequences, Fourier integrals, majorization, local limit theorem.
 
 \noindent\textbf{Mathematics Subject Classification (2020):} 05A16, 60F05, 11B75.
 
@@ -33,9 +33,9 @@ Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs 
 
 The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$, and conjectured that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$; Sullivan~\cite{Sul13} proved this by the Laplace method. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
 
-Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $\sigma_n^2=1^2+2^2+\cdots+n^2$ be its variance. Then $\Pr(S_n=0)=Z(n)/2^n$, and Sullivan's theorem reads
+Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. Then $\Pr(S_n=0)=Z(n)/2^n$, and Sullivan's theorem reads
 \[
-\sigma_n\Pr(S_n=0)\to\sqrt{2/\pi}\qquad(n\equiv0,3\bmod 4).
+\sqrt{Q_n}\,\Pr(S_n=0)\to\sqrt{2/\pi}\qquad(n\equiv0,3\bmod 4).
 \]
 TheoremDB~\cite{TDB} records as problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$. An exact computation recorded there shows strict increase from $16$ to $1000$; the only decreases up to $16$ are $3\to4$, $8\to11$ and $15\to16$.
 
@@ -43,14 +43,14 @@ More generally, let
 \[
 S_{m,n}=\sum_{j=1}^n j\sum_{i=1}^m\epsilon_{ij},
 \]
-with independent fair signs $\epsilon_{ij}$, so that each summand $j\epsilon_j$ is replaced by $m$ independent copies; we call $m\ge1$ the multiplicity. Its variance is $mQ_n$, where $Q_n=\sum_{j=1}^n j^2=n(n+1)(2n+1)/6$. All values of $S_{m,n}$ have the parity of $mn(n+1)/2$; call $n\ge1$ \emph{admissible} for $m$ if this number is even, and put
+with independent fair signs $\epsilon_{ij}$, so that each summand $j\epsilon_j$ is replaced by $m$ independent copies; we call $m\ge1$ the multiplicity. Its variance is $mQ_n$, and $Q_n=n(n+1)(2n+1)/6$. All values of $S_{m,n}$ have the parity of $mn(n+1)/2$; call $n\ge1$ \emph{admissible} for $m$ if this number is even, and put
 \[
 A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
-For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$ and $Q_n=\sigma_n^2$, so $A_{1,n}=\sigma_n\Pr(S_n=0)$.
+For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$, so $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$.
 
 Equivalently, $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. In the notation of Andrica and Tomescu~\cite[Section~1]{AT02}, $C_{m,n}=S(m,\dots,m;1,\dots,n)$.
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered $k$-partitions of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of ordered $k$-partitions of equal sum of the multiset with $d$ copies of each of $1,\dots,n$ when $dn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar.
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered $k$-partitions of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of ordered $k$-partitions of equal sum of the multiset with $m$ copies of each of $1,\dots,n$ when $mn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -62,7 +62,7 @@ m=3&:\quad (n,a)=(3,4).
 \end{theorem}
 
 \begin{corollary}\label{cor:one}
-Along $n\equiv0,3\pmod 4$, the sequence $\sigma_n\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
+Along $n\equiv0,3\pmod 4$, the sequence $\sqrt{Q_n}\,\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
 \end{corollary}
 
 For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1]{BW16} gives, for every $\delta>0$,
@@ -155,7 +155,7 @@ Here $1\le m\le319$ and $n\le319/m$. Since $C_{m,n}\ge0$ and $A_{m,n}=\sqrt{mQ_n
 \[
 Q_aC_{m,a}^2-4^{m(a-n)}Q_nC_{m,n}^2 .
 \]
-For the $1268$ steps with $mn<320$ these integers are computed exactly, once by expanding the generating polynomial and once by counting sign patterns; none is zero, and exactly the eight listed in the theorem are negative.
+For the $1268$ steps with $mn<320$ these integers are computed exactly, once by expanding the generating polynomial and once by counting choices of signs; none is zero, and exactly the eight listed in the theorem are negative.
 \end{proof}
 
 \begin{remark}\label{rem:values}
