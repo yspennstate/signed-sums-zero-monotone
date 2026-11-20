@@ -64,7 +64,7 @@ m=3&:\quad (n,a)=(3,4).
 Along $n\equiv0,3\pmod 4$, the sequence $\sqrt{Q_n}\,\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
 \end{corollary}
 
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions into $k$ parts of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of such partitions of the multiset with $m$ copies of each of $1,\dots,n$ when $mn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar. None of these works compares consecutive terms.
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions into $k$ parts of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of such partitions of the multiset with $m$ copies of each of $1,\dots,n$ when $mn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar.
 
 For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1]{BW16} gives, for every $\delta>0$,
 \[
@@ -78,7 +78,7 @@ For admissible $n$,
 A_{m,n}=\frac2\pi\int_0^{B_n}f_n(x)\,dx,\qquad
 f_n(x)=\prod_{j=1}^n\cos^m\Bigl(\frac{jx}{\sqrt{mQ_n}}\Bigr),\qquad B_n=\frac\pi2\sqrt{mQ_n}.
 \end{equation}
-We compare these integrals at the two indices of a step directly. Every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite[Proposition~3.C.1]{MOA11}, applied to each power, gives for $N>n$
+We compare these integrals at the two indices of a step directly. Every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite[Chapter~3, Proposition~C.1]{MOA11}, applied to each power, gives for $N>n$
 \[
 f_N(x)\ \ge\ f_n(x)\exp\Bigl(\frac{x^4}{12m}\,(r_n-r_{n+1})\Bigr)\quad(0\le x\le b_n),\qquad r_n-r_{n+1}>\frac{1}{4n^2}.
 \]
@@ -104,7 +104,7 @@ On $|z|<\pi/2$ we have $-\log\cos z=\sum_{l\ge1}c_lz^{2l}$ with $c_1=1/2$, $c_2=
 \]
 and the same holds with $k+1$ in place of $k$ because $b_k<b_{k+1}$.
 
-We claim $P_l(k)\ge P_l(k+1)$ for every $l\ge1$, with equality for $l=1$ since $P_1\equiv1$. Let $u\in\mathbb R^{k+1}$ list $k^2/Q_k,\dots,1/Q_k,0$ and $w$ list $(k+1)^2/Q_{k+1},\dots,1/Q_{k+1}$, both in decreasing order and both with sum $1$. For $i\le k$ the ratio $w_i/u_i=\bigl((j+1)/j\bigr)^2Q_k/Q_{k+1}$ with $j=k+1-i$ increases with $i$, and $u_{k+1}-w_{k+1}<0$. Hence $u_i-w_i$ changes sign at most once, and since both vectors have sum $1$ its signs run from positive to negative; the partial sums of $u-w$ rise and then fall from $0$ back to $0$, and so they are nonnegative. Thus $u$ majorizes $w$, and Karamata's inequality~\cite[Proposition~3.C.1]{MOA11} for the convex functions $y\mapsto y^l$ on $[0,\infty)$ gives the claim. Subtracting the two series and keeping only the term $l=2$, where $mc_2(x^2/m)^2=x^4/(12m)$, gives for $0\le x<b_k$
+We claim $P_l(k)\ge P_l(k+1)$ for every $l\ge1$, with equality for $l=1$ since $P_1\equiv1$. Let $u\in\mathbb R^{k+1}$ list $k^2/Q_k,\dots,1/Q_k,0$ and $w$ list $(k+1)^2/Q_{k+1},\dots,1/Q_{k+1}$, both in decreasing order and both with sum $1$. For $i\le k$ the ratio $w_i/u_i=\bigl((j+1)/j\bigr)^2Q_k/Q_{k+1}$ with $j=k+1-i$ increases with $i$, and $u_{k+1}-w_{k+1}<0$. Hence $u_i-w_i$ changes sign at most once, and since both vectors have sum $1$ its signs run from positive to negative; the partial sums of $u-w$ rise and then fall from $0$ back to $0$, and so they are nonnegative. Thus $u$ majorizes $w$, and Karamata's inequality~\cite[Chapter~3, Proposition~C.1]{MOA11} for the convex functions $y\mapsto y^l$ on $[0,\infty)$ gives the claim. Subtracting the two series and keeping only the term $l=2$, where $mc_2(x^2/m)^2=x^4/(12m)$, gives for $0\le x<b_k$
 \[
 f_{k+1}(x)\ge f_k(x)\exp\Bigl(\frac{x^4}{12m}\bigl(P_2(k)-P_2(k+1)\bigr)\Bigr),
 \]
