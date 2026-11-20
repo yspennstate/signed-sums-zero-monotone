@@ -48,7 +48,7 @@ with independent fair signs $\epsilon_{ij}$ and a fixed multiplicity $m\ge1$. It
 A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 For $m=1$ we have $S_{1,n}=S_n$ and $Q_n=\sigma_n^2$, so $A_{1,n}=\sigma_n\Pr(S_n=0)$.
-Equivalently, $2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum. These counts were studied by Bagdasar and Andrica~\cite{BA17}. Partitions of such multisets into $k$ parts of equal sum were studied by Andrica and Bagdasar~\cite{AB21}, and the ordered ones are counted by He, Lv and Zhou~\cite{HLZ23}. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$.
+Equivalently, $2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum. Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of such multisets, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered $k$-partitions of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} established uniform asymptotic formulas for the number of ordered $k$-partitions of equal sum of the multiset with $d$ copies of each of $1,\dots,n$ when $dn/(k\log n)\to\infty$, confirming conjectures of Andrica and Bagdasar. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be consecutive admissible indices for $m$. Then $A_{m,a}\ne A_{m,n}$, and $A_{m,a}<A_{m,n}$ exactly in the following eight cases:
@@ -76,7 +76,7 @@ A_{m,n}=\frac2\pi\int_0^{B_n}f_n(x)\,dx,\qquad f_n(x)=\varphi_n\bigl(x/\sqrt{mQ_
 We use $f_n$ for every $n\ge1$, admissible or not. Put $b_n=\pi\sqrt{mQ_n}/(2n)$. For $0\le x\le b_n$ every argument $jx/\sqrt{mQ_n}$ with $j\le n$ lies in $[0,\pi/2]$, so $f_n\ge0$ there. Since $Q_n/n^2=(2n+3+1/n)/6$ increases with $n$, so does $b_n$.
 
 \begin{lemma}\label{lem:pointwise}
-Let $r_n=\sum_{j=1}^nj^4/Q_n^2$. For $N>n\ge1$ and $0\le x\le b_n$,
+Let $r_n=\sum_{j\le n}j^4/Q_n^2$. For $N>n\ge1$ and $0\le x\le b_n$,
 \[
 f_N(x)\ge f_n(x)\exp\Bigl(\frac{x^4}{12m}(r_n-r_{n+1})\Bigr),
 \]
@@ -161,7 +161,7 @@ The author holds equity in Heights Labs and in Convex Nexus Capital and has a ma
 The \LaTeX\ source and two programs with their outputs are available at \url{https://github.com/yspennstate/signed-sums-zero-monotone}. The program \texttt{check\_polynomial.py} decides the finite comparisons by multiplying out the generating polynomial, checks the rational identities and the numerical inequality of Section~\ref{sec:proof}, and prints the values in Remark~\ref{rem:values}. The program \texttt{check\_signed\_walk.py} decides the same comparisons by counting signed sums.
 
 \section*{Declaration of generative AI and AI-assisted technologies}
-Codex (OpenAI) found the proof of Theorem~\ref{thm:main} and the classification for all multiplicities, and decided the finite comparisons with its own program. Claude (Anthropic) checked each step of the proof, rederived the constants, wrote the two programs of the repository and recomputed every finite comparison with both, checked the citations, and wrote the text. The question is problem P2538 of TheoremDB; the asymptotic results quoted in the introduction are due to Andrica and Tomescu, Sullivan, and Baker and Wagner, and the counts for several copies were studied by Bagdasar and Andrica. The case $m=1$ of Theorem~\ref{thm:main}, which answers that question, is new. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+Codex (OpenAI) wrote the proof of Theorem~\ref{thm:main} and the classification for all multiplicities, and decided the finite comparisons with its own program. Claude (Anthropic) checked each step of the proof, rederived the constants, wrote the two programs of the repository and recomputed every finite comparison with both, checked the citations, and wrote the text. The argument rests on Sullivan's theorem~\cite{Sul13}, which proves the asymptotic formula conjectured by Andrica and Tomescu~\cite{AT02}, and on his estimate of the tails~\cite[Lemma~2]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \begin{thebibliography}{99}
 
