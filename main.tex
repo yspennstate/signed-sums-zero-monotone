@@ -37,7 +37,7 @@ Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs 
 \[
 \sqrt{Q_n}\,\Pr(S_n=0)\to\sqrt{2/\pi}\qquad(n\equiv0,3\bmod 4).
 \]
-TheoremDB~\cite{TDB}, a public database of problems for machine mathematics, lists as open problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$. TheoremDB records exact integer comparisons showing that the sequence increases at each of the $492$ steps from $16$ to $1000$; below $16$ it decreases exactly at $3\to4$, $8\to11$ and $15\to16$.
+TheoremDB~\cite{TDB}, a public database of problems for machine mathematics, lists as open problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$.
 
 More generally, let
 \[
@@ -51,7 +51,7 @@ We call $A_{m,n}$ the \emph{normalized number of zero signed sums}. For odd $m$ 
 
 The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$. It counts the ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, the ordered pairs of disjoint parts with equal sums whose union is this multiset, and $C_{1,n}=Z(n)$. In the notation of~\cite[Section~1]{AT02} it is $S(m,\dots,m;1,\dots,n)$.
 
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the numbers of ordered $2$-partitions of equal sum of multisets with repeated elements, and Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions of a multiset into any number of parts of equal sum. For two parts, Andrica and Bagdasar~\cite{AB18} conjectured that $C_{m,n}\sim2^{mn}n^{-3/2}\sqrt{6/(\pi m)}$ along admissible $n$, and He, Lv and Zhou~\cite{HLZ23} proved this together with the corresponding formulas for more parts. Since $Q_n\sim n^3/3$, it says that $A_{m,n}\to\sqrt{2/\pi}$ for every fixed $m$. Remark~\ref{rem:limit} derives this limit from the integral formula~\eqref{eq:A} below, as in Sullivan's proof for $m=1$~\cite{Sul13}. An asymptotic formula, even with its second term, does not decide the sign of $A_{m,a}-A_{m,n}$ at a given step.
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the numbers of ordered $2$-partitions of equal sum of multisets with repeated elements, and Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions of a multiset into any number of parts of equal sum. For two parts, Andrica and Bagdasar~\cite{AB18} conjectured that $C_{m,n}\sim2^{mn}n^{-3/2}\sqrt{6/(\pi m)}$ along admissible $n$, and He, Lv and Zhou~\cite{HLZ23} proved this together with the corresponding formulas for more parts. The case $m=2$ is older. The number of subsets of $\{-n,\dots,n\}$ with sum $0$ is $2C_{2,n}$: each pair $\{-j,j\}$ contributes $j(\epsilon+\epsilon')/2$ with two fair signs, and the element $0$ doubles the count. Van Lint~\cite{vL67} found the asymptotic number of these subsets, and Entringer~\cite{Ent68} extended it to subsets with other prescribed sums. Since $Q_n\sim n^3/3$, the formula of He, Lv and Zhou says that $A_{m,n}\to\sqrt{2/\pi}$ for every fixed $m$. Remark~\ref{rem:limit} derives this limit from the integral formula~\eqref{eq:A} below, as in Sullivan's proof for $m=1$~\cite{Sul13}. An asymptotic formula, even with its second term, does not decide the sign of $A_{m,a}-A_{m,n}$ at a given step.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -162,7 +162,7 @@ The right side is positive as soon as $216\pi e^4m^{3/2}n^{7/2}e^{-mn/8}<1$, whi
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main} for $mn<320$]
-Here $1\le m\le319$ and $n\le319/m$. Since $C_{m,n}\ge0$ and $A_{m,n}=\sqrt{mQ_n}\,C_{m,n}/2^{mn}$, the difference $A_{m,a}-A_{m,n}$ has the sign of the integer (the test recorded for $m=1$ in~\cite{TDB})
+Here $1\le m\le319$ and $n\le319/m$. Since $C_{m,n}\ge0$ and $A_{m,n}=\sqrt{mQ_n}\,C_{m,n}/2^{mn}$, the difference $A_{m,a}-A_{m,n}$ has the sign of the integer
 \[
 Q_aC_{m,a}^2-4^{m(a-n)}Q_nC_{m,n}^2 .
 \]
@@ -182,12 +182,12 @@ This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI),
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. Both are among the funders named above.
 
 \section*{Code and data availability}
-The \LaTeX\ source and two programs with their outputs are available at \url{https://github.com/yspennstate/signed-sums-zero-monotone}. The program \texttt{check\_polynomial.py} decides the steps with $mn<320$ by multiplying out $\prod_{j\le n}(1+x^j)^m$, checks the closed forms of $r_n$ and $r_n-r_{n+1}$ in the proof of Lemma~\ref{lem:pointwise} for $n\le300$ and the inequality $216\cdot4\cdot81\cdot320^4<7.4\cdot10^{14}$, and prints the values in Remark~\ref{rem:values}. The program \texttt{check\_signed\_walk.py} decides the same steps by counting choices of signs.
+The \LaTeX\ source and two programs with their outputs are available at \url{https://github.com/yspennstate/signed-sums-zero-monotone}. The program \texttt{check\_polynomial.py} decides the steps with $mn<320$ by multiplying out $\prod_{j\le n}(1+x^j)^m$ and prints the values in Remark~\ref{rem:values}. The program \texttt{check\_signed\_walk.py} decides the same steps by counting choices of signs.
 
 \section*{Declaration of generative AI and AI-assisted technologies}
 Codex (OpenAI) wrote the proof of Theorem~\ref{thm:main} and the first computation of the steps with $mn<320$. Claude (Anthropic) checked the proof and wrote the two programs of the repository and the text.
 
-The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs, as is the conjecture of Andrica and Bagdasar~\cite{AB18} proved in~\cite{HLZ23}. The comparison step uses Karamata's inequality in the form of Marshall, Olkin and Arnold~\cite{MOA11}. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs, as is the conjecture of Andrica and Bagdasar~\cite{AB18} proved in~\cite{HLZ23}, whose case $m=2$ is due to van Lint~\cite{vL67}. The comparison step uses Karamata's inequality in the form of Marshall, Olkin and Arnold~\cite{MOA11}. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \begin{thebibliography}{99}
 
@@ -221,6 +221,12 @@ L.~Baker and S.~Wagner.
 \newblock \emph{Publ. Math. Debrecen}, 89(4):469--482, 2016.
 \newblock \url{https://doi.org/10.5486/PMD.2016.7452}; arXiv:1506.04555.
 
+\bibitem{Ent68}
+R.~C. Entringer.
+\newblock Representation of $m$ as $\sum_{k=-n}^{n}\epsilon_k k$.
+\newblock \emph{Canad. Math. Bull.}, 11:289--293, 1968.
+\newblock \url{https://doi.org/10.4153/CMB-1968-036-3}.
+
 \bibitem{HLZ23}
 X.~He, J.-B. Lv, and N.~H. Zhou.
 \newblock Note on the number of ordered $k$-partitions of multiset $M_d[n]$ with equal sums.
@@ -241,6 +247,12 @@ B.~D. Sullivan.
 \newblock On a conjecture of Andrica and Tomescu.
 \newblock \emph{J. Integer Seq.}, 16:Article 13.3.1, 2013.
 \newblock \url{https://cs.uwaterloo.ca/journals/JIS/VOL16/Sullivan/sullivan8.html}; arXiv:1210.8437.
+
+\bibitem{vL67}
+J.~H. van Lint.
+\newblock Representation of $0$ as $\sum_{k=-N}^{N}\epsilon_k k$.
+\newblock \emph{Proc. Amer. Math. Soc.}, 18:182--184, 1967.
+\newblock \url{https://doi.org/10.1090/S0002-9939-1967-0205964-8}.
 
 \bibitem{OEIS}
 OEIS Foundation Inc.
