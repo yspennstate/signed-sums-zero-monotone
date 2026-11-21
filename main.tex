@@ -22,7 +22,7 @@ Jerusalem, Givat Ram,}\\
 \maketitle
 
 \begin{abstract}
-Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. When every summand $j\epsilon_j$ is replaced by $m$ independent copies, the corresponding normalized number of zero signed sums, which also tends to $\sqrt{2/\pi}$, has exactly four decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the trigonometric integrals of the sums at consecutive indices on the range where the integrands are nonnegative, using that the vector $(j^2/Q_n)_{j\le n}$ extended by a zero majorizes the corresponding vector for $n+1$. The remaining ranges are bounded separately. The finitely many pairs $(m,n)$ with $mn<320$ are decided by an exact computation.
+Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, the normalized number of zero signed sums $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive such indices are $3\to4$, $8\to11$ and $15\to16$. When every summand $j\epsilon_j$ is replaced by $m$ independent copies, the corresponding quantity, which also tends to $\sqrt{2/\pi}$, has exactly four decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the trigonometric integrals of the sums at consecutive indices on the range where the integrands are nonnegative, using that the vector $(j^2/Q_n)_{j\le n}$ extended by a zero majorizes the corresponding vector for $n+1$. The remaining ranges are bounded separately. The finitely many steps with $mn<320$ are decided by an exact computation.
 \end{abstract}
 
 \noindent\textbf{Keywords:} signed sums, trigonometric integrals, majorization, Karamata's inequality, ordered partitions of multisets.
@@ -31,13 +31,13 @@ Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs 
 
 \section{Introduction}
 
-The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$~\cite[Theorem~2.3]{AT02}, and conjectured~\cite[Conjecture~2.6]{AT02} that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$. Sullivan~\cite{Sul13} proved this by the Laplace method, and notes that Hwang had suggested a similar approach in his review~\cite{Hwa03} of that paper. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
+The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$~\cite[Theorem~2.3]{AT02}, and conjectured~\cite[Conjecture~2.6]{AT02} that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$. Sullivan~\cite{Sul13} proved this by the Laplace method, and notes that Hwang had suggested a similar approach in his review~\cite{Hwa03} of~\cite{AT02}. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
 
 Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. Then $\Pr(S_n=0)=Z(n)/2^n$, and Sullivan's theorem reads
 \[
 \sqrt{Q_n}\,\Pr(S_n=0)\to\sqrt{2/\pi}\qquad(n\equiv0,3\bmod 4).
 \]
-TheoremDB~\cite{TDB}, a public database of problems for machine mathematics, lists as open problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$.
+TheoremDB~\cite{TDB} lists as open problem P2538 the question whether this sequence is strictly increasing along $n\equiv0,3\pmod4$ once $n\ge16$.
 
 More generally, let
 \[
@@ -49,9 +49,16 @@ A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 We call $A_{m,n}$ the \emph{normalized number of zero signed sums}. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$, so $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$.
 
-The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$. It counts the ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, the ordered pairs of disjoint parts with equal sums whose union is this multiset, and $C_{1,n}=Z(n)$. In the notation of~\cite[Section~1]{AT02} it is $S(m,\dots,m;1,\dots,n)$.
+The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$. It counts the ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, the ordered pairs of disjoint parts with equal sums whose union is this multiset, and $C_{1,n}=Z(n)$.
 
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the numbers of ordered $2$-partitions of equal sum of multisets with repeated elements, and Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions of a multiset into any number of parts of equal sum. For two parts, Andrica and Bagdasar~\cite{AB18} conjectured that $C_{m,n}\sim2^{mn}n^{-3/2}\sqrt{6/(\pi m)}$ along admissible $n$, and He, Lv and Zhou~\cite{HLZ23} proved this together with the corresponding formulas for more parts. The case $m=2$ is older. The number of subsets of $\{-n,\dots,n\}$ with sum $0$ is $2C_{2,n}$: each pair $\{-j,j\}$ contributes $j(\epsilon+\epsilon')/2$ with two fair signs, and the element $0$ doubles the count. Van Lint~\cite{vL67} found the asymptotic number of these subsets, and Entringer~\cite{Ent68} extended it to subsets with other prescribed sums. Since $Q_n\sim n^3/3$, the formula of He, Lv and Zhou says that $A_{m,n}\to\sqrt{2/\pi}$ for every fixed $m$. Remark~\ref{rem:limit} derives this limit from the integral formula~\eqref{eq:A} below, as in Sullivan's proof for $m=1$~\cite{Sul13}. An asymptotic formula, even with its second term, does not decide the sign of $A_{m,a}-A_{m,n}$ at a given step.
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the numbers of ordered $2$-partitions of equal sum of multisets with repeated elements, Andrica and Bagdasar~\cite{AB18} did the same for $3$-partitions, and in~\cite{AB21} they derived the generating function and an integral formula for ordered partitions of a multiset into any number of parts of equal sum. Bagdasar and Andrica~\cite{BA17} also formulated conjectures on the asymptotic behaviour of the numbers of $2$-partitions, and He, Lv and Zhou~\cite{HLZ23} proved that $C_{m,n}\sim2^{mn}n^{-3/2}\sqrt{6/(\pi m)}$ along admissible $n$, together with the corresponding formulas for more parts. The case $m=2$ is older. The number of subsets of $\{-n,\dots,n\}$ with sum $0$ is $2C_{2,n}$: each pair $\{-j,j\}$ contributes $j(\epsilon+\epsilon')/2$ with two fair signs, and the element $0$ doubles the count. Van Lint~\cite{vL67} found the asymptotic number of these subsets, and Entringer~\cite{Ent68} and Clark~\cite{Cla00} extended it to subsets with other prescribed sums. Since $Q_n\sim n^3/3$, the formula of He, Lv and Zhou says that $A_{m,n}\to\sqrt{2/\pi}$ for every fixed $m$. An asymptotic formula, even with its second term, does not decide the sign of $A_{m,a}-A_{m,n}$ at a given step.
+
+For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1 and Section~2.2.1]{BW16} gives
+\[
+A_{1,n}=\sqrt{2/\pi}\,\Bigl(1-\frac{r_n}{4}\Bigr)+O\bigl(n^{-2}\bigr),\qquad
+r_n=\frac{1}{Q_n^2}\sum_{j\le n}j^4\sim\frac{9}{5n},
+\]
+so for large $n$ the sequence $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the two-term values $\sqrt{2/\pi}\,(1-r_n/4)$ and $\sqrt{2/\pi}\,(1-r_a/4)$ differ by an amount of order $n^{-2}$, which the error term does not control.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -66,13 +73,6 @@ m=3&:\quad (n,a)=(3,4).
 Along $n\equiv0,3\pmod 4$, the sequence $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
 \end{corollary}
 
-For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1 and Section~2.2.1]{BW16} gives
-\[
-A_{1,n}=\sqrt{2/\pi}\,\Bigl(1-\frac{r_n}{4}\Bigr)+O\bigl(n^{-2}\bigr),\qquad
-r_n=\frac{1}{Q_n^2}\sum_{j\le n}j^4\sim\frac{9}{5n},
-\]
-so for large $n$ the sequence $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the two-term values $\sqrt{2/\pi}\,(1-r_n/4)$ and $\sqrt{2/\pi}\,(1-r_a/4)$ differ by an amount of order $n^{-2}$, which the error term does not control, so the expansion does not give the sign of $A_{1,a}-A_{1,n}$.
-
 For admissible $n$,
 \begin{equation}\label{eq:A}
 A_{m,n}=\frac2\pi\int_0^{B_n}f_n(x)\,dx,\qquad
@@ -82,7 +82,7 @@ We compare these integrals at the two indices of a step. Every factor of $f_n$ i
 \[
 f_N(x)\ \ge\ f_n(x)\exp\Bigl(\frac{x^4}{12m}\,(r_n-r_{n+1})\Bigr)\quad(0\le x\le b_n),\qquad r_n-r_{n+1}>\frac{1}{4n^2}.
 \]
-On $[1,2]$ this gives a lower bound for $\int_0^{b_n}(f_a-f_n)\,dx$ (Lemma~\ref{lem:gain}), and the parts of~\eqref{eq:A} beyond $b_n$ and $b_a$ are bounded as in Sullivan~\cite[Lemma~2, Case~3]{Sul13} (Lemma~\ref{lem:tail}). For $mn\ge320$ the gain exceeds the two tails, and $f_a\ge0$ on $[b_n,b_a]$, so $A_{m,a}>A_{m,n}$. For each of the $1268$ steps with $mn<320$ the sign of $A_{m,a}-A_{m,n}$ is the sign of an explicit integer, which is evaluated exactly.
+On $[1,2]$ this gives a lower bound for $\int_0^{b_n}(f_a-f_n)\,dx$ (Lemma~\ref{lem:gain}), and the parts of~\eqref{eq:A} beyond $b_n$ and $b_a$ are bounded as in Sullivan~\cite[Lemma~2, Case~3]{Sul13} (Lemma~\ref{lem:tail}). For $mn\ge320$ the lower bound of Lemma~\ref{lem:gain} exceeds the sum of the two bounds of Lemma~\ref{lem:tail}, and $f_a\ge0$ on $[b_n,b_a]$, so $A_{m,a}>A_{m,n}$. For each of the $1268$ steps with $mn<320$ the sign of $A_{m,a}-A_{m,n}$ is the sign of an explicit integer, which is evaluated exactly.
 
 \section{Proof}\label{sec:proof}
 
@@ -145,10 +145,6 @@ With $x=t\sqrt{mQ_k}$ the integral is $\sqrt{mQ_k}\int|\varphi_k(t)|\,dt$ over $
 Since $\cos^2\theta=1-\sin^2\theta\le e^{-\sin^2\theta}$, we get $|\varphi_k(t)|\le\exp\bigl(-\frac m2\sum_j\sin^2(jt)\bigr)\le e^{-mk/8}$, and the range of $t$ has length less than $\pi/2$.
 \end{proof}
 
-\begin{remark}\label{rem:limit}
-For every fixed $m$, $A_{m,n}\to\sqrt{2/\pi}$ along admissible $n$~\cite{HLZ23}; here is the derivation from~\eqref{eq:A}. With $f_n$, $B_n$ and $b_n$ as above, we have $0\le f_n(x)\le e^{-x^2/2}$ on $[0,b_n]$ because $-\log\cos z\ge z^2/2$, and $f_n(x)\to e^{-x^2/2}$ for each $x$, since $-\log\cos z=z^2/2+O(z^4)$ for $|z|\le1$ gives $-\log f_n(x)=x^2/2+O\bigl(x^4\sum_{j\le n}j^4/(mQ_n^2)\bigr)$ and $\sum_{j\le n}j^4/Q_n^2\le n^2/Q_n\to0$. The integral over $[b_n,B_n]$ tends to $0$ by Lemma~\ref{lem:tail}, and dominated convergence gives the limit $\frac2\pi\int_0^\infty e^{-x^2/2}\,dx=\sqrt{2/\pi}$.
-\end{remark}
-
 \begin{proof}[Proof of Theorem~\ref{thm:main} for $mn\ge320$]
 Let $n<a$ be a step with $mn\ge320$; then $a\le n+3\le4n$. By~\eqref{eq:A}, splitting both integrals at $b_n$ and the first again at $b_a>b_n$,
 \[
@@ -187,7 +183,7 @@ The \LaTeX\ source and two programs with their outputs are available at \url{htt
 \section*{Declaration of generative AI and AI-assisted technologies}
 Codex (OpenAI) wrote the proof of Theorem~\ref{thm:main} and the first computation of the steps with $mn<320$. Claude (Anthropic) checked the proof and wrote the two programs of the repository and the text.
 
-The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs, as is the conjecture of Andrica and Bagdasar~\cite{AB18} proved in~\cite{HLZ23}, whose case $m=2$ is due to van Lint~\cite{vL67}. The comparison step uses Karamata's inequality in the form of Marshall, Olkin and Arnold~\cite{MOA11}. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs, as are the conjectures of Bagdasar and Andrica~\cite{BA17} confirmed in~\cite{HLZ23}; the case $m=2$ of the asymptotic formula is due to van Lint~\cite{vL67}. The comparison step uses Karamata's inequality in the form of Marshall, Olkin and Arnold~\cite{MOA11}. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \begin{thebibliography}{99}
 
@@ -220,6 +216,12 @@ L.~Baker and S.~Wagner.
 \newblock Erd\H{o}s--Sur\'anyi sequences and trigonometric integrals.
 \newblock \emph{Publ. Math. Debrecen}, 89(4):469--482, 2016.
 \newblock \url{https://doi.org/10.5486/PMD.2016.7452}; arXiv:1506.04555.
+
+\bibitem{Cla00}
+L.~Clark.
+\newblock On the representation of $m$ as $\sum_{k=-n}^{n}\epsilon_k k$.
+\newblock \emph{Int. J. Math. Math. Sci.}, 23(2):77--80, 2000.
+\newblock \url{https://doi.org/10.1155/S0161171200001885}.
 
 \bibitem{Ent68}
 R.~C. Entringer.
