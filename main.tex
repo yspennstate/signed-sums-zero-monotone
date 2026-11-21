@@ -31,7 +31,7 @@ Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs 
 
 \section{Introduction}
 
-The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$~\cite[Theorem~2.3]{AT02}, and conjectured~\cite[Conjecture~2.6]{AT02} that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$; Sullivan~\cite{Sul13} proved this by the Laplace method and notes that a similar approach was suggested by Hwang in his review of~\cite{AT02}~\cite{Hwa03}. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
+The number $Z(n)$ of choices of signs with $\pm1\pm2\pm\cdots\pm n=0$ (sequence A063865 of~\cite{OEIS}) is nonzero exactly when $n(n+1)/2$ is even, that is, when $n\equiv0$ or $3\pmod 4$, and is then the coefficient of $x^{n(n+1)/4}$ in $(1+x)(1+x^2)\cdots(1+x^n)$. Andrica and Tomescu~\cite{AT02} wrote $Z(n)$ as a trigonometric integral, proved $Z(n)\ge6Z(n-4)$ for $n\ge8$~\cite[Theorem~2.3]{AT02}, and conjectured~\cite[Conjecture~2.6]{AT02} that $Z(n)\sim\sqrt{6/\pi}\,2^nn^{-3/2}$. Sullivan~\cite{Sul13} proved this by the Laplace method, and notes that Hwang had suggested a similar approach in his review~\cite{Hwa03} of that paper. Baker and Wagner~\cite{BW16} obtained the second term of the expansion for a wide class of weight sequences.
 
 Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. Then $\Pr(S_n=0)=Z(n)/2^n$, and Sullivan's theorem reads
 \[
@@ -49,7 +49,7 @@ A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 We call $A_{m,n}$ the \emph{normalized number of zero signed sums}. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$, so $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$.
 
-The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, of ways to split it into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. It is the number denoted $S(m,\dots,m;1,\dots,n)$ in~\cite[Section~1]{AT02}.
+The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$. It counts the ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, the ways to split it into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. It is the number denoted $S(m,\dots,m;1,\dots,n)$ in~\cite[Section~1]{AT02}.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -176,7 +176,7 @@ Rounded to four places, $A_{1,16}=0.7755$, $A_{1,100}=0.7943$ and $A_{1,300}=0.7
 \section*{Acknowledgments and funding}
 The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), and by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning. It was also supported by the Israel Science Foundation (grants 2258/19 and 4101/25), by Heights Labs and by Convex Nexus Capital.
 
-This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. The method is described in~\cite{MathBrainPaper}.
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}. The framework is a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. The method is described in~\cite{MathBrainPaper}.
 
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. Both are among the funders named above.
