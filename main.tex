@@ -22,7 +22,7 @@ Jerusalem, Givat Ram,}\\
 \maketitle
 
 \begin{abstract}
-Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. When every summand $j\epsilon_j$ is replaced by $m$ independent copies, the normalized number of zero signed sums, which also tends to $\sqrt{2/\pi}$, has exactly four decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the trigonometric integrals of consecutive sums on the range where the integrands are nonnegative, using that the vector $(j^2/Q_n)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. The finitely many pairs $(m,n)$ with $mn<320$ are decided by an exact computation.
+Let $S_n=\epsilon_1+2\epsilon_2+\cdots+n\epsilon_n$ with independent fair signs $\epsilon_j$, and let $Q_n=1^2+2^2+\cdots+n^2$ be its variance. On the indices $n\equiv0,3\pmod 4$, where $S_n$ can vanish, $\sqrt{Q_n}\,\Pr(S_n=0)$ tends to $\sqrt{2/\pi}$ by a theorem of Sullivan. We prove that this sequence increases strictly from $n=16$ on, and that the only decreases between consecutive indices $n\equiv0,3\pmod4$ are $3\to4$, $8\to11$ and $15\to16$. When every summand $j\epsilon_j$ is replaced by $m$ independent copies, the corresponding normalized probability of a zero sum, which also tends to $\sqrt{2/\pi}$, has exactly four decreases for $m=2$, one for $m=3$, and none for $m\ge4$. The proof compares the trigonometric integrals of the sums at consecutive indices on the range where the integrands are nonnegative, using that the vector $(j^2/Q_n)_{j\le n}$ majorizes the corresponding vector of a longer sum, and bounds the remaining ranges. The finitely many pairs $(m,n)$ with $mn<320$ are decided by an exact computation.
 \end{abstract}
 
 \noindent\textbf{Keywords:} signed sums, trigonometric integrals, majorization, Karamata's inequality, ordered partitions of multisets.
@@ -49,7 +49,7 @@ A_{m,n}=\sqrt{mQ_n}\,\Pr(S_{m,n}=0)\qquad(n\ \text{admissible}).
 \]
 We call $A_{m,n}$ the \emph{normalized number of zero signed sums}. For odd $m$ the admissible indices are those with $n\equiv0,3\pmod4$, and for even $m$ every $n\ge1$ is admissible; in both cases consecutive admissible indices differ by at most $3$. A \emph{step} is a pair $n<a$ of consecutive admissible indices, and it is a \emph{decrease} if $A_{m,a}<A_{m,n}$. For $m=1$ we have $S_{1,n}=S_n$, so $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$.
 
-The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ways to split $m$ labelled copies of each of $1,\dots,n$ into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. It is the number denoted $S(m,\dots,m;1,\dots,n)$ in~\cite[Section~1]{AT02}.
+The number $C_{m,n}=2^{mn}\Pr(S_{m,n}=0)$ is the middle coefficient of $\prod_{j=1}^n(1+x^j)^m$, the number of ordered $2$-partitions of equal sum of the multiset with $m$ labelled copies of each of $1,\dots,n$, that is, of ways to split it into two ordered parts of equal sum, and $C_{1,n}=Z(n)$. It is the number denoted $S(m,\dots,m;1,\dots,n)$ in~\cite[Section~1]{AT02}.
 
 \begin{theorem}\label{thm:main}
 Let $m\ge1$, and let $n<a$ be a step. Then $A_{m,a}\ne A_{m,n}$, and the step is a decrease exactly in the following eight cases:
@@ -64,25 +64,25 @@ m=3&:\quad (n,a)=(3,4).
 Along $n\equiv0,3\pmod 4$, the sequence $A_{1,n}=\sqrt{Q_n}\,\Pr(S_n=0)$ is strictly increasing for $n\ge16$, and the step from $15$ to $16$ is a decrease. For every $m\ge4$ the sequence $A_{m,n}$ is strictly increasing along all admissible $n$.
 \end{corollary}
 
-Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions into $k$ parts of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} proved asymptotic formulas for the number of such partitions of the multiset with $m$ copies of each of $1,\dots,n$, conjectured by Andrica and Bagdasar. Here we treat the case $k=2$: by the description of $C_{m,n}$ above, $A_{m,n}=\sqrt{mQ_n}\,C_{m,n}/2^{mn}$, where $C_{m,n}$ is the number of ordered $2$-partitions of equal sum of the multiset with $m$ copies of each of $1,\dots,n$. For every fixed $m$, $A_{m,n}\to\sqrt{2/\pi}$ along admissible $n$. This is the case $k=2$ of the formulas of~\cite{HLZ23}; it also follows from the integral formula~\eqref{eq:A} below as in Sullivan's proof for $m=1$~\cite{Sul13} (Remark~\ref{rem:limit}). Theorem~\ref{thm:main} describes how this limit is approached: for every $m$ the sequence is eventually strictly increasing, so it approaches $\sqrt{2/\pi}$ from below.
-
 For $m=1$ the theorem of Baker and Wagner~\cite[Theorem~1 and Section~2.2.1]{BW16} gives
 \[
 A_{1,n}=\sqrt{2/\pi}\,\Bigl(1-\frac{r_n}{4}\Bigr)+O\bigl(n^{-2}\bigr),\qquad
 r_n=\frac{1}{Q_n^2}\sum_{j\le n}j^4\sim\frac{9}{5n},
 \]
-so for large $n$ the sequence $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the two-term values $\sqrt{2/\pi}\,(1-r_n/4)$ and $\sqrt{2/\pi}\,(1-r_a/4)$ differ by an amount of order $n^{-2}$, which the error term does not control, so the expansion does not give the sign of $A_{1,a}-A_{1,n}$. A third term, which by~\cite{BW16} the same method yields, would give the sign for all large $n$, with no bound on how large.
+so for large $n$ the sequence $A_{1,n}$ approaches $\sqrt{2/\pi}$ from below. For a step $n<a$ the two-term values $\sqrt{2/\pi}\,(1-r_n/4)$ and $\sqrt{2/\pi}\,(1-r_a/4)$ differ by an amount of order $n^{-2}$, which the error term does not control, so the expansion does not give the sign of $A_{1,a}-A_{1,n}$. The method of~\cite{BW16} also yields a third term, with error $O(n^{-3})$; this gives the sign of $A_{1,a}-A_{1,n}$ for all sufficiently large $n$, but without an explicit threshold.
 
 For admissible $n$,
 \begin{equation}\label{eq:A}
 A_{m,n}=\frac2\pi\int_0^{B_n}f_n(x)\,dx,\qquad
 f_n(x)=\prod_{j=1}^n\cos^m\Bigl(\frac{jx}{\sqrt{mQ_n}}\Bigr),\qquad B_n=\frac\pi2\sqrt{mQ_n}.
 \end{equation}
-We compare these integrals at the two indices of a step directly. Every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite[Chapter~3, Proposition~C.1]{MOA11}, applied to $y\mapsto y^l$ for each power $z^{2l}$ of this series, gives for $N>n$
+We compare these integrals at the two indices of a step. Every factor of $f_n$ is nonnegative on $[0,b_n]$, where $b_n=\pi\sqrt{mQ_n}/(2n)$. The vector $(j^2/Q_n)_{j\le n}$, extended by a zero, majorizes $(j^2/Q_{n+1})_{j\le n+1}$, and $-\log\cos z$ is a power series in $z^2$ with positive coefficients. Karamata's inequality~\cite[Chapter~3, Proposition~C.1]{MOA11}, applied to $y\mapsto y^l$ for each power $z^{2l}$ of this series, gives for $N>n$
 \[
 f_N(x)\ \ge\ f_n(x)\exp\Bigl(\frac{x^4}{12m}\,(r_n-r_{n+1})\Bigr)\quad(0\le x\le b_n),\qquad r_n-r_{n+1}>\frac{1}{4n^2}.
 \]
 Hence $\int_0^{b_n}(f_a-f_n)\,dx\ge e^{-4}/(48mn^2)$ when $mn\ge320$. On the rest of the range, $\int_{b_k}^{B_k}|f_k(x)|\,dx\le\frac\pi2\sqrt{mQ_k}\,e^{-mk/8}$ for every $k$, by an estimate that follows Sullivan~\cite[Lemma~2, Case~3]{Sul13}. For $mn\ge320$ the first bound exceeds the sum of these integrals for $k=n$ and $k=a$, and $f_a\ge0$ on $[b_n,b_a]$, so $A_{m,a}>A_{m,n}$. For each of the $1268$ steps with $mn<320$ the sign of $A_{m,a}-A_{m,n}$ is the sign of an explicit integer, which is evaluated exactly.
+
+Bagdasar and Andrica~\cite{BA17} gave recurrences, generating functions and integral formulas for the number of ordered $2$-partitions of equal sum of multisets with repeated elements, and stated conjectures on the unimodality, distribution and asymptotic behaviour of these sequences. Andrica and Bagdasar~\cite{AB21} derived the generating function and an integral formula for ordered partitions into $p$ parts of equal sum of a multiset with arbitrary elements and multiplicities. He, Lv and Zhou~\cite{HLZ23} proved asymptotic formulas for the number of such partitions of the multiset with $m$ copies of each of $1,\dots,n$. Here we treat the case $p=2$, where $A_{m,n}=\sqrt{mQ_n}\,C_{m,n}/2^{mn}$. For every fixed $m$, $A_{m,n}\to\sqrt{2/\pi}$ along admissible $n$. This is the case $k=2$ of the formulas of~\cite{HLZ23}; it also follows from the integral formula~\eqref{eq:A} below as in Sullivan's proof for $m=1$~\cite{Sul13} (Remark~\ref{rem:limit}). Theorem~\ref{thm:main} describes how this limit is approached: for every $m$ the sequence is eventually strictly increasing, so it approaches $\sqrt{2/\pi}$ from below.
 
 \section{Proof}\label{sec:proof}
 
@@ -94,7 +94,7 @@ For $N>n\ge1$ and $0\le x\le b_n$,
 \[
 f_N(x)\ge f_n(x)\exp\Bigl(\frac{x^4}{12m}(r_n-r_{n+1})\Bigr),
 \]
-where $r_n=Q_n^{-2}\sum_{j\le n}j^4$, and $r_n-r_{n+1}>1/(4n^2)$.
+with $r_n$ as in the introduction, and $r_n-r_{n+1}>1/(4n^2)$.
 \end{lemma}
 
 \begin{proof}
@@ -131,7 +131,7 @@ f_N-f_n\ge f_n\,\frac{x^4}{12m}\cdot\frac{1}{4n^2}\ge\frac{e^{-4}}{48mn^2}.
 Since $[1,2]\subset[0,b_n]$ has length $1$ and the integrand is nonnegative on the rest of $[0,b_n]$, the lemma follows.
 \end{proof}
 
-The next estimate follows Sullivan~\cite[Lemma~2, Case~3]{Sul13}, with the bound $1-s\le e^{-s}$ in place of the inequality of arithmetic and geometric means.
+The next estimate is Sullivan's~\cite[Lemma~2, Case~3]{Sul13}, extended to multiplicity $m$ and to the range $t\ge\pi/(2k)$, with the bound $1-s\le e^{-s}$ in place of the inequality of arithmetic and geometric means.
 
 \begin{lemma}\label{lem:tail}
 For every $k\ge1$, $\int_{b_k}^{B_k}|f_k(x)|\,dx\le\frac\pi2\sqrt{mQ_k}\,e^{-mk/8}$.
@@ -166,7 +166,7 @@ Here $1\le m\le319$ and $n\le319/m$. Since $C_{m,n}\ge0$ and $A_{m,n}=\sqrt{mQ_n
 \[
 Q_aC_{m,a}^2-4^{m(a-n)}Q_nC_{m,n}^2 .
 \]
-For the $1268$ steps with $mn<320$ these integers are computed exactly from the coefficients $C_{m,n}$ of $\prod_{j\le n}(1+x^j)^m$; none is zero, and exactly the eight listed in the theorem are negative. The programs \texttt{check\_polynomial.py} and \texttt{check\_signed\_walk.py} of the repository give the same list.
+For the $1268$ steps with $mn<320$ these integers are computed exactly from the coefficients $C_{m,n}$ of $\prod_{j\le n}(1+x^j)^m$; none is zero, and exactly the eight listed in the theorem are negative. The integers are computed by the program \texttt{check\_polynomial.py} listed under Code and data availability.
 \end{proof}
 
 \begin{remark}\label{rem:values}
@@ -174,7 +174,7 @@ Rounded to four places, $A_{1,16}=0.7755$, $A_{1,100}=0.7943$ and $A_{1,300}=0.7
 \end{remark}
 
 \section*{Acknowledgments and funding}
-The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning. It was also supported by the Israel Science Foundation (grants 2258/19 and 4101/25), by Heights Labs and by Convex Nexus Capital.
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), and by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning. It was also supported by the Israel Science Foundation (grants 2258/19 and 4101/25), by Heights Labs and by Convex Nexus Capital.
 
 This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. The method is described in~\cite{MathBrainPaper}.
 
@@ -187,7 +187,7 @@ The \LaTeX\ source and two programs with their outputs are available at \url{htt
 \section*{Declaration of generative AI and AI-assisted technologies}
 Codex (OpenAI) wrote the proof of Theorem~\ref{thm:main} and the first computation of the steps with $mn<320$. Claude (Anthropic) checked the proof and wrote the two programs of the repository and the text.
 
-The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+The question is problem P2538 of TheoremDB~\cite{TDB}. The limit $\sqrt{2/\pi}$ was conjectured by Andrica and Tomescu~\cite{AT02} and proved by Sullivan~\cite{Sul13}, and the second term of the expansion is due to Baker and Wagner~\cite{BW16}. Ordered $2$-partitions of equal sum of multisets with repeated elements were studied by Bagdasar and Andrica~\cite{BA17}, Andrica and Bagdasar~\cite{AB21} and He, Lv and Zhou~\cite{HLZ23}. These results are theirs. Lemma~\ref{lem:tail} follows Sullivan's estimate~\cite[Lemma~2, Case~3]{Sul13}. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
 \begin{thebibliography}{99}
 
